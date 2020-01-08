@@ -1,0 +1,34 @@
+.container-fluid {
+  max-width: 100%;
+  text-align: center;
+}
+
+.hour {
+  display: inline-flex;
+  width: 25%;
+}
+
+.schedule {
+  display: inline-flex;
+  width: 50%;
+
+}
+
+.save {
+  display: inline-flex;
+  width: 25%;
+  position: right;
+}
+
+.past {
+  background-color: gray;
+}
+
+.present {
+  background-color: #E98061;
+}
+
+.future {
+  background-color: #7BF577;
+}
+

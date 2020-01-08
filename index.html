@@ -13,9 +13,23 @@
   <title>Day Planner</title>
 </head>
 <body>
-  <h1>Work Day Scheduler</h1>
-  <h3>A simple calendar app for scheduling your work day</h3>
-  <div class="date"></div>
+  <div class="container-fluid">
+    <h1>Work Day Scheduler</h1>
+    <h3>A simple calendar app for scheduling your work day</h3>
+    <div class="date"></div>
+    <br>
+  </div>
+  <div class="container-fluid">
+    <div class="hour" id="daily-schedule">
+      <div class="input-group">
+        <input type="text" class="form-control" id="text" placeholder="Type event here" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" id="saveBtn" type="button">Save</button>
+          <button class="btn btn-outline-secondary" id="clearBtn" type="button">Clear</button>
+        </div>
+      </div>  
+    </div>
+  </div>
 </body>
 
 <script src="asset/javascript/script.js"></script>
