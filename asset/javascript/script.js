@@ -8,13 +8,6 @@ var todaysDate = moment().format('MMMM Do YYYY, h:mm:ss a');
 $(date).text(todaysDate);
 
 // Function for timeblock by hour
-var hours = ["9"]
-var hour = $(".hour");
-hour = "";
-
-for(var i = 0; i < hours.length; i++) {
-  $(hour).text(hours + 1);
-}
 
 // Function for save button
 saveBtn.on("click", function() {
