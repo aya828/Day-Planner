@@ -3,19 +3,13 @@ var event = $(".event");
 var saveBtn = $(".save");
 var clearBtn = $("#clearBtn");
 
-var hour9 = $("#hour9");
-var hour10 = $("#hour10");
-var hour11 = $("#hour11");
-var hour12 = $("#hour12");
-var hour1 = $("#hour1");
-var hour2 = $("#hour2");
-var hour3 = $("#hour3");
-var hour4 = $("#hour4");
-var hour5 = $("#hour5");
-
-
 // For date and time
 var todaysDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+var valueDiv = $("span").attr("value");
+var currentTime = moment().format('h'); 
+var now = parseInt(currentTime);
+
+
 $(date).text(todaysDate);
 
 // Function for save button and saving content in local storage
@@ -25,5 +19,29 @@ saveBtn.on("click", function() {
 })
 
 // Function for changing color scheme when time is past, present, future
+function colorChange() {
+  
+  $(".time-block").each(function(){
+    var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+    
+    console.log(blockHour);
+    console.log(typeof blockHour);
+    console.log(now);
+    console.log(typeof now);
+    if(blockHour < now) {
+      event.addClass("past");
+    }
+    else if(blockHour == now) {
+      event.removeClass("past")
+      event.addClass("present");
+    }
+    else if(blockHour > now) {
+      event.removeClass("present");
+      event.removeClass("past");
+      event.addClass("future");
+    }
+  })
+}
 
+colorChange();
 

@@ -17,9 +17,6 @@
   margin-right: -20px;
   text-align: right;
 }
-.event {
-  background-color: #7BF577;
-}
 
 .present {
   background-color: #E98061;
@@ -35,6 +32,10 @@
   width: 100px;
   margin-left: -40px;
   border: 1px solid lightgrey;
+}
+
+.future {
+  background-color: #7BF577;
 }
 
 
