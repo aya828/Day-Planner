@@ -20,9 +20,8 @@ $(date).text(todaysDate);
 
 // Function for save button and saving content in local storage
 saveBtn.on("click", function() {
-  var eventText = $(event).val();
+  var eventText = $("#event").val();
   localStorage.setItem("events", JSON.stringify(eventText));
-  showTime();
 })
 
 // Function for changing color scheme when time is past, present, future
