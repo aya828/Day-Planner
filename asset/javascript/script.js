@@ -1,5 +1,5 @@
 var date = $(".date");
-var event = $("#event");
+var event = $(".event");
 var saveBtn = $(".save");
 var clearBtn = $("#clearBtn");
 
@@ -20,7 +20,7 @@ $(date).text(todaysDate);
 
 // Function for save button and saving content in local storage
 saveBtn.on("click", function() {
-  var eventText = $("#event").val();
+  var eventText = $(event).val();
   localStorage.setItem("events", JSON.stringify(eventText));
 })
 
