@@ -1,5 +1,5 @@
 var date = $(".date");
-var event = $("#text").value;
+var event = $("#text");
 var saveBtn = $("#saveBtn");
 var clearBtn = $("#clearBtn");
 
@@ -9,16 +9,15 @@ $(date).text(todaysDate);
 
 // Function for timeblock by hour
 
-// Function for save button
+// Function for save button and saving content in local storage
 saveBtn.on("click", function() {
-  console.log(event);
-  debugger
-  $("#text").text(localStorage.setItem("events", event));
+  var eventText = $(event).val();
+  localStorage.setItem("events", JSON.stringify(eventText));
 })
 
-
-// Funtcion for saving content into local storage 
-
 // Function for clear button, clearing content in field and in local storage
+clearBtn.on("click", function() {
+  event.val("");
+})
 
 // Function for changing color scheme when time is past, present, future
