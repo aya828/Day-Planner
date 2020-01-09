@@ -18,7 +18,7 @@
   text-align: right;
 }
 
-div.time-block input {
+div input.form-control {
   background-color: transparent;
 }
 
