@@ -18,6 +18,10 @@
   text-align: right;
 }
 
+div.time-block input {
+  background-color: transparent;
+}
+
 .present {
   background-color: #E98061;
 }

@@ -1,6 +1,8 @@
 var date = $(".date");
 var event = $(".event");
-var saveBtn = $(".save");
+var saveBtn9 = $(".save9");
+var saveBtn10 = $(".save10");
+var saveBtn11 = $(".save11");
 var clearBtn = $("#clearBtn");
 
 // For date and time
@@ -13,7 +15,7 @@ var now = parseInt(currentTime);
 $(date).text(todaysDate);
 
 // Function for save button and saving content in local storage
-saveBtn.on("click", function() {
+saveBtn9.on("click", function() {
   var eventText = $(event).val();
   localStorage.setItem("events", JSON.stringify(eventText));
 })
@@ -24,24 +26,28 @@ function colorChange() {
   $(".time-block").each(function(){
     var blockHour = parseInt($(this).attr("id").split("hour")[1]);
     
-    console.log(blockHour);
+    console.log(blockHour + "|" + now);
     console.log(typeof blockHour);
     console.log(now);
     console.log(typeof now);
     if(blockHour < now) {
-      event.addClass("past");
+      $(this).children(".text").removeClass("future");
+      $(this).children(".text").removeClass("present");
+      $(this).children(".text").addClass("past");
     }
     else if(blockHour == now) {
-      event.removeClass("past")
-      event.addClass("present");
+      $(this).children(".text").removeClass("past")
+      $(this).children(".text").removeClass("future");
+      $(this).children(".text").addClass("present");
     }
     else if(blockHour > now) {
-      event.removeClass("present");
-      event.removeClass("past");
-      event.addClass("future");
+      $(this).children(".text").removeClass("present");
+      $(this).children(".text").removeClass("past");
+      $(this).children(".text").addClass("future");
     }
   })
 }
 
 colorChange();
+
 
