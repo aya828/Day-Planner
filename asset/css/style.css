@@ -3,32 +3,40 @@
   text-align: center;
 }
 
+.row {
+  margin: 10px;
+}
+
+.date {
+  border-bottom: 4px solid black;
+  padding-bottom: 50px;
+}
+
 .hour {
-  display: inline-flex;
-  width: 25%;
+  border-top: 1px solid lightgrey;
+  margin-right: -20px;
+  text-align: right;
 }
-
-.schedule {
-  display: inline-flex;
-  width: 50%;
-
-}
-
-.save {
-  display: inline-flex;
-  width: 25%;
-  position: right;
-}
-
-.past {
-  background-color: gray;
+#event {
+  background-color: #7BF577;
 }
 
 .present {
   background-color: #E98061;
 }
 
-.future {
-  background-color: #7BF577;
+.past {
+  background-color: gray;
 }
+
+.btn {
+  background-color: turquoise;
+  color: white;
+  width: 100px;
+  margin-left: -40px;
+  border: 1px solid lightgrey;
+}
+
+
+
 
